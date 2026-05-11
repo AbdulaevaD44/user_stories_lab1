@@ -1,0 +1,26 @@
+# 1. Игнорируем всё
+*
+
+# 2. Разрешаем Git заходить в нужные папки
+!Models/
+!ViewModels/
+!Views/
+
+# 3. Разрешаем сам файл .gitignore
+!.gitignore
+
+# 4. Разрешаем конкретные файлы в папках
+!Models/*.cs
+!ViewModels/*.cs
+!Views/*.xaml
+!Views/*.xaml.cs
+
+# 5. Разрешаем файл с историями
+!Story.txt
+
+# 6. Игнорируем временные и служебные файлы Visual Studio
+bin/
+obj/
+*.user
+*.suo
+*.csproj.user

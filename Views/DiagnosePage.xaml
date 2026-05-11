@@ -1,0 +1,34 @@
+<Page x:Class="GardenApp.Views.DiagnosePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Диагностика растений">
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="🔬 Диагностика болезней" FontSize="28" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,20">
+            <TextBlock Text="Выберите растение:" Margin="0,0,0,5"/>
+            <ComboBox x:Name="PlantsCombo" Height="30"/>
+            
+            <TextBlock Text="Или загрузите фото:" Margin="0,15,0,5"/>
+            <Button x:Name="LoadPhotoBtn" Content="📷 Загрузить фото" Click="LoadPhotoBtn_Click" Width="150" HorizontalAlignment="Left" Background="#2196F3" Foreground="White"/>
+            <Image x:Name="PreviewImage" Height="150" Margin="0,10,0,0" Stretch="Uniform"/>
+        </StackPanel>
+
+        <Button x:Name="DiagnoseBtn" Grid.Row="2" Content="🔍 Определить болезнь" Click="DiagnoseBtn_Click" Width="200" Height="40" Background="#4CAF50" Foreground="White" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <Border Grid.Row="3" Background="#E8F5E9" CornerRadius="10" Padding="15">
+            <StackPanel>
+                <TextBlock Text="📋 Результат диагностики" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+                <TextBlock x:Name="ResultText" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
