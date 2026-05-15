@@ -24,3 +24,8 @@ obj/
 *.user
 *.suo
 *.csproj.user
+# Разрешаем папку GardenApp и всё внутри
+!GardenApp/
+!GardenApp/**/*
+!GardenApp/BusinessLogic/
+!GardenApp/BusinessLogic/**/*.cs
