@@ -1,0 +1,27 @@
+<Window x:Class="GardenApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Садовод-помощник" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Навигационное меню -->
+        <Border Grid.Row="0" Background="#2E7D32" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="HomeBtn" Content="🏠 Полив" Click="HomeBtn_Click" Width="100" Margin="5" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+                <Button x:Name="PlantsBtn" Content="🌿 Мои растения" Click="PlantsBtn_Click" Width="120" Margin="5" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+                <Button x:Name="DiagnoseBtn" Content="🔬 Диагностика" Click="DiagnoseBtn_Click" Width="120" Margin="5" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+                <Button x:Name="CalendarBtn" Content="📅 Календарь" Click="CalendarBtn_Click" Width="100" Margin="5" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+                <Button x:Name="TasksBtn" Content="✅ Задачи" Click="TasksBtn_Click" Width="100" Margin="5" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Контентная область (страницы будут подгружаться сюда) -->
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
